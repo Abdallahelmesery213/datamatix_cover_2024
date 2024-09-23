@@ -1100,6 +1100,36 @@ footer form .btn{
 
 /* end home sreen */
 
+/* start welcome page */
+.welcome-page .colorgraph {
+    height: 5px;
+    border-top: 0;
+    background: #ed1b24;
+    border-radius: 5px;
+    background-image: -webkit-linear-gradient(left, #ed1b24, #ed1b24 12.5%, #0171bb, #0171bb 25%, #90278e, #90278e 37.5%, #f59d2f 50%, #ed1b24 62.5%, #0171bb 75%, #90278e 87.5%, #f59d2f 100%, #f59d2f);
+    background-image: -moz-linear-gradient(left, #ed1b24, #ed1b24 12.5%, #0171bb, #0171bb 25%, #90278e, #90278e 37.5%, #f59d2f 50%, #ed1b24 62.5%, #0171bb 75%, #90278e 87.5%, #f59d2f 100%, #f59d2f);
+    background-image: -o-linear-gradient(left, #ed1b24, #ed1b24 12.5%, #0171bb, #0171bb 25%, #90278e, #90278e 37.5%, #f59d2f 50%, #ed1b24 62.5%, #0171bb 75%, #90278e 87.5%, #f59d2f 100%, #f59d2f);
+    background-image: linear-gradient(to right, #ed1b24, #ed1b24 12.5%, #0171bb, #0171bb 25%, #90278e, #90278e 37.5%, #f59d2f 50%, #ed1b24 62.5%, #0171bb 75%, #90278e 87.5%, #f59d2f 100%, #f59d2f);
+}
+.welcome-page .accordion-item .accordion-button{
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 18px;
+}
+.welcome-page .accordion-item .accordion-body p {
+    font-size: 18px;
+}
+.welcome-page h2{
+    color: var(--main-color);
+}
+.welcome-page .accordion-button:not(.collapsed) {
+    background-color: #fff;
+}
+.welcome-page .accordion-button:focus{
+    box-shadow: none;
+}
+/* end welcome page */
+
 /* start speaker page */
 .speaker-page .speaker{
     background-color: #fff;
