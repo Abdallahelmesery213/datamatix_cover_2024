@@ -1130,6 +1130,17 @@ footer form .btn{
 }
 /* end welcome page */
 
+/* start photo-gallery-page */
+.photo-gallery-page .accordion-item .img small{
+    font-size: 10px;
+    line-height: 22px;
+    text-align: center;
+}
+.photo-gallery-page .accordion-item{
+    border: 0 !important;
+}
+/* end photo-gallery-page */
+
 /* start speaker page */
 .speaker-page .speaker{
     background-color: #fff;
