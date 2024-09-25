@@ -1141,6 +1141,37 @@ footer form .btn{
 }
 /* end photo-gallery-page */
 
+/* start services-page */
+.services-page .services{
+    background-color: rgb(240 240 241);
+    padding: 50px 0;
+}
+.services-page .services a{
+    color: #000;
+}
+.services-page .services h4{
+    font-size: 22px;
+    border-left: 8px solid var(--main-color);
+    padding-left: 16px;
+}
+.services-page .services .row2 h4{
+    border-left: 8px solid #f39c28;
+}
+.services-page .services .row3 h4{
+    border-left: 8px solid #90278e;
+}
+.services-page .services .row5 h4{
+    border-left: 8px solid #9c005a;
+}
+.services-page .services .row6 h4{
+    border-left: 8px solid #3db146;
+}
+.services-page .services .row11 h4{
+    border-left: 8px solid #c39772;
+}
+
+/* end services-page */
+
 /* start speaker page */
 .speaker-page .speaker{
     background-color: #fff;
