@@ -6,9 +6,45 @@
     <title>Media </title>
     <link rel="stylesheet" href="https://datamatixgroup.com/asset/fonts/remixicon.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="./js/history7.js"></script>
+   
     <link rel="stylesheet" href="./css/style.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .swiper {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .swiper-thumbs {
+            margin-top: 10px;
+        }
+        .swiper-thumbs .swiper-slide {
+            width: 100px;
+            height: 100px;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        .swiper-thumbs .swiper-slide-thumb-active {
+            opacity: 1;
+        }
+        /* Customize the scrollbar */
+        .swiper-scrollbar {
+            background: #ddd;
+            height: 6px;
+        }
+        .swiper-scrollbar-drag {
+            background: #333;
+        }
+    </style>
 </head>
 <body>
     <div class="home-screen">
@@ -182,9 +218,100 @@
         </div>
         <!-- end Counter -->
 
-        <h2 class="text-center">
-            Coming Soon
-        </h2>
+        <div class="container">
+            <!-- Main Swiper (Gallery) -->
+            <div class="swiper main-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./images/media-1.jpg" alt="media 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/media-2.jpg" alt="media 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/media-3.jpg" alt="media 3">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/media-4.jpg" alt="media 4">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/media-5.jpg" alt="media 5">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/media-6.jpg" alt="media 6">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/media-7.jpg" alt="media 7">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/media-8.jpg" alt="media 8">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/media-9.jpg" alt="media 9">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/media-10.jpg" alt="media 10">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/media-11.jpg" alt="media 11">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/media-12.jpg" alt="media 12">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/media-13.jpg" alt="media 13">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thumbnail Swiper -->
+            <div class="swiper swiper-thumbs">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./images/media-1.jpg" alt="Thumbnail 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/media-2.jpg" alt="Thumbnail 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/media-3.jpg" alt="Thumbnail 3">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/media-4.jpg" alt="Thumbnail 4">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/media-5.jpg" alt="Thumbnail 5">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/media-6.jpg" alt="Thumbnail 6">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/media-7.jpg" alt="Thumbnail 7">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/media-8.jpg" alt="Thumbnail 8">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/media-9.jpg" alt="Thumbnail 9">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/media-10.jpg" alt="Thumbnail 10">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/media-11.jpg" alt="Thumbnail 11">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/media-12.jpg" alt="Thumbnail 12">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/media-13.jpg" alt="Thumbnail 13">
+                    </div>
+                </div>
+                <!-- Scrollbar -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+            </div>
+
+        </div>
 
        
 
@@ -374,5 +501,37 @@
         </footer>
         <!-- end footer -->
     </div>
+
+    <!-- Swiper JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // Initialize the thumbnail swiper
+        var swiperThumbs = new Swiper('.swiper-thumbs', {
+            scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,  // Allows dragging of the scrollbar
+            },
+            mousewheel: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+
+        // Initialize the main swiper and link it with the thumbs swiper
+        var swiperMain = new Swiper('.main-slider', {
+            spaceBetween: 10,
+            thumbs: {
+                swiper: swiperThumbs
+            }
+        });
+    </script>
+
 </body>
 </html>
