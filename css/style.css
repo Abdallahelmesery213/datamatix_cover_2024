@@ -235,11 +235,12 @@ header .nav3 ul li:not(:last-child)::after {
 }
 .datamatix-title h2{
     font-size: 35px;
-    font-family: setReta;
+    /* font-family: setReta; */
 }
 .datamatix-title p{
     font-family: bruumLightFont;
-    font-size: 20px;
+    font-size: 22px;
+    text-align: left;
 }
 .datamatix-title .btn{
     border-radius: 0;
@@ -272,8 +273,8 @@ header .nav3 ul li:not(:last-child)::after {
     padding: 64px 0;
 }
 .datamatix-video p{
-    font-family: setReta;
-    font-size: 26px;
+    /* font-family: setReta; */
+    font-size: 20px;
     line-height: 35px;
     width: 80%;
     margin: auto;
@@ -314,6 +315,7 @@ header .nav3 ul li:not(:last-child)::after {
     background-color: var(--second-color);
     border-radius: 0;
     margin-top: 32px;
+    display: none;
 }
 .image-upper .section .text h3{
     color: #fff;
@@ -462,10 +464,12 @@ header .nav3 ul li:not(:last-child)::after {
 }
 .main-title h2,
 .main-title h3{
-    font-family: setReta;
-    font-size: 45px;
+    /* font-family: setReta; */
+    font-family: acuminFont;
+    /* font-family: 'bruumBoldFont'; */
+    font-size: 38px;
+    line-height: 47px;
     text-align: center;
-    margin-bottom: 16px;
 }
 .banr-txt-1{
     background-image: url(./../images/img_7-02.jpg);
