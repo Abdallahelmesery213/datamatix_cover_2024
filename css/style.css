@@ -1719,6 +1719,9 @@ footer form .btn{
     header .right-part .nav3{
         text-align: left;
     }
+    header .left-part{
+        min-height: auto;
+    }
     .nav2, .nav3{
         padding: 20px 0;
     }
@@ -1774,7 +1777,23 @@ footer form .btn{
         font-size: 25px;
         text-align: left;
     }
-    .datamatix-title p{
+    .contact-page .contact-page form .btn-outline-primary{
+        margin-bottom: 30px;
+    }
+    .photo-gallery-page .accordion-item .accordion-button{
+        display: flex;
+        flex-direction: column;
+    }
+    .welcome-page .accordion-item .accordion-body p,
+    .contact-page p,
+    .welcome-page .accordion-item .accordion-button
+    {
+        font-size: 16px;
+    }
+    .datamatix-title p,
+    .services-page .services a.h4,
+    .services-page .services h3,
+    .services-page .services h4{
         font-size: 18px;
     }
     .image-upper .section img {
