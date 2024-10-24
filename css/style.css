@@ -1817,6 +1817,9 @@ footer form .btn{
     footer .copy-right p {
         font-size: 13px;
     }
+    footer form, footer .icon-download{
+        margin-bottom: 15px;
+    }
 }
 @media only screen and (max-width: 505px) {
     header .right-part .nav1 .dropdowns {
