@@ -1749,6 +1749,46 @@ footer form .btn{
         margin: auto;
         text-align: center;
     }
+    .datamatix-video video{
+        width: -webkit-fill-available; 
+        width: -moz-available; 
+        width: fill-available; 
+        width: 100%; 
+        margin: auto;
+        display: block;
+    }
+    .datamatix-video p
+    {
+        font-size: 16px;
+        line-height: 25px;
+        padding-top: 25px;
+    }
+    .image-upper {
+        margin-top: 175px;
+    }
+    .past-event-final h5{
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    .datamatix-title h2 {
+        font-size: 25px;
+        text-align: left;
+    }
+    .datamatix-title p{
+        font-size: 18px;
+    }
+    .image-upper .section img {
+        margin-top: 35px;
+    }
+    .main-title h2, .main-title h3{
+        line-height: 35px;
+    }
+    .middle-east-dark .header h3, .upcoming-events .header h3,
+    .past-event-final .header h4,
+    .main-title h2, .main-title h3,
+    .upcoming-events .cards .text h4 {
+        font-size: 25px;
+    }
     footer h5 {
         font-size: 15px;
     }
