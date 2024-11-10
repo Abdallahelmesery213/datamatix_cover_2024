@@ -10,6 +10,107 @@
     <script src="./js/history7.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
 </head>
+<style>
+    .counters strong {
+        color: #000;
+        font-family: BruumFY-Bold;
+        font-size: 30px !important;
+    }
+
+    .custom-content-grid .counters .counter label {
+        font-family: 'BruumFY-Light';
+        color: #686666;
+        font-size: 15px;
+    }
+
+    .timetext {
+        color: #fff;
+        font-size: 18px;
+    }
+
+
+    #header .header-nav-main.header-nav-main-square nav > ul > li.active > a {
+        color: snow;
+        background: transparent;
+    }
+
+    #header .header-nav-main.header-nav-main-square nav > ul > li > a {
+        font-family: 'BruumFY-Light';
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        font-size: 17px;
+        border-right: 1px solid;
+    }
+
+    #header .header-nav-main nav > ul > li > a {
+        padding: 15px 4px 15px !important;
+    }
+
+    .nav-pills > li {
+        float: left;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    #counter small {
+        color: #fff !important;
+    }
+
+    thead {
+        background-color: #0a549f;
+    }
+
+        thead tr th {
+            color: #fff;
+        }
+
+    table tr td a {
+        color: #000;
+    }
+
+    .search-calender label {
+        margin-bottom: 5px;
+    }
+
+    .search-calender {
+        background: #e6e6e6;
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+
+    .form-select {
+        background-position: right .75rem center;
+    }
+
+    .search-calender button {
+        background-color: #0a549f;
+        margin-top: 27px;
+        color: #fff;
+        border-radius: 20px;
+        width: 100%;
+    }
+
+    .calender-btns {
+        padding: 20px 15px;
+    }
+
+        .calender-btns .btn {
+            background-color: #0a549f;
+            color: #fff;
+            border-radius: 0;
+            width: 100%;
+            font-size: 13px;
+        }
+
+        .calender-btns .download i {
+            margin-right: 7px;
+        }
+
+        .calender-btns .download p {
+            font-size: 14px;
+            color: #58595b;
+        }
+</style>
 <body>
     <div class="home-screen">
         <!-- start header -->
@@ -172,9 +273,137 @@
         </div>
         <!-- end Counter -->
 
-        <h2 class="text-center">
-            Coming Soon
-        </h2>
+        <div class="calender-event" style="padding: 40px 0;">
+            <div class="container">
+                <div style="background-color: #f2f2f2;">
+                    <div class="calender-btns">
+                        <div class="row text-center">
+                            <div class="col-lg-4">
+                                <button class="btn">> Datamatix Conferences and Summits</button>
+                            </div>
+                            <div class="col-lg-4">
+                                <button class="btn">> Datamatix One Day Conference</button>
+                            </div>
+                            <div class="col-lg-4">
+                                <button class="btn">> Datamatix Round Table Meetings and Debates</button>
+                            </div>
+                        </div>
+                        <div class="row pt-4">
+                            <div class="col-md-3">
+                                <div class="download">
+                                    <p><i class="fas fa-envelope"></i>Email Calendar to Professionals</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="download">
+                                    <p><i class="fas fa-download"></i>Download Proposals and Letters</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="download">
+                                    <p><i class="fas fa-microphone"></i>Download the Event Presentations</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="download">
+                                    <p><i class="fas fa-shopping-bag"></i>Events Sales Department Policy</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-calender">
+                        <div class="row" id="search_panel">
+                            <div class="col-md-3" id="event_type_panel">
+                                <label>Event Type:</label>
+                                <br />
+                                <select class="form-select" id="EventTypeId"></select>
+                                <i class="fa fa-spinner fa-spin" style="display: none;"></i>
+                            </div>
+
+                            <div class="col-md-2" id="from_year_panel">
+                                <label>Year: </label>
+                                <select class="form-select" id="FromYear"></select>
+                            </div>
+                            <div class="col-md-2" id="from_month_panel">
+                                <label>Month: </label>
+                                <select class="form-select" id="FromMonth"></select>
+                            </div>
+                            <!--<div class="col-md-2" id="event_category_panel">
+                                <label>Event Category:</label>
+                                <br />
+                                <select class="form-select" id="EventCategoryId"></select>
+                                <i class="fa fa-spinner fa-spin" style="display: none;"></i>
+                            </div>
+                            <div class="col-md-2">
+                                <label>Event Date:</label>
+                                <br />
+                                <input class="form-control" type="date" id="EventDate">
+                            </div>-->
+
+                            <div class="col-md-2" id="country_panel">
+                                <label>Country:</label>
+                                <br />
+                                <select class="form-control" onChange="getCitiesByCountry('CountryId', '#CityId', '#city_panel', '', '')" id="CountryId"></select>
+                                <i class="fa fa-spinner fa-spin" style="display: none;"></i>
+                            </div>
+
+                            <div class="col-md-2" id="city_panel">
+                                <label>City :</label>
+                                <br />
+                                <select class="form-control" id="CityId">
+                                    <option value="">All</option>
+                                </select>
+                                <i class="fa fa-spinner fa-spin" style="display: none;"></i>
+                            </div>
+
+                            <div class="col-md-1" id="submit_search_panel">
+                                <button class="btn" onClick="search()">Go</button>
+
+                                <p style="margin: 0; padding: 0; text-align: center; margin-top: 40px; font-size: 11px; display: none"><i class="fa fa-spinner fa-spin"></i> Please Wait!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="ps-3 pe-3">Select the type of Event you are looking for, from the drop down in (Type) and then press. GO</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12" id="search_result_panel">
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Sr</th>
+                                        <th class="text-center">Date</th>
+                                        <th class="text-center">Timing</th>
+                                        <th>Conference Name</th>
+                                        <th>Country</th>
+                                        <th>City</th>
+                                        <th class="text-center">Website</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <!--<tr>
+                                        <td>1</td>
+                                        <td>March <br> 06 - 04</td>
+                                        <td>8AM - 2PM</td>
+                                        <td>27th GCC Smart Government and Smart Cities Conference</td>
+                                        <td>UAE</td>
+                                        <td>Dubai</td>
+                                        <td><a href="#">View</a></td>
+                                        <td><a href="#">Click</a></td>
+                                    </tr>-->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
        
 
@@ -405,5 +634,350 @@
         </footer>
         <!-- end footer -->
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer=defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+    <script>
+        var server = "https://crm.dtmxapps.com/"; // https://localhost:5001/ | https://crm.dtmxapps.com/
+        var archive = false;
+        var monthLong = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        var monthShort = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+        var currentYear = Number(new Date().getFullYear());
+
+        $(document).ready(function () {
+            $("#EventTypeId").select2();
+            //$("#EventCategoryId").select2();
+            $("#FromYear").select2();
+            $("#FromMonth").select2();
+            $("#CountryId").select2();
+            $("#CityId").select2();
+
+            $(".select2-selection").css("height", "38px");
+            $(".select2-selection").css("border", "var(--bs-border-width) solid var(--bs-border-color)");
+            $(".select2-container--default .select2-selection--single .select2-selection__rendered").css("line-height", "32px");
+            $(".select2-container--default .select2-selection--single .select2-selection__arrow").css("height", "32px");
+            $(".select2-container--default .select2-selection--single").css("border-radius", "var(--bs-border-radius)");
+
+            getEventTypes("#EventTypeId", "#event_type_panel", "");
+            //getEventCategories("#EventCategoryId", "#event_category_panel", "");
+            setFromYears("#FromYear", "#from_year_panel", "");
+            setFromMonths("#FromMonth", "#from_month_panel", "");
+            getCountries("#CountryId", "#country_panel", "");
+
+            search();
+        });
+
+        function getEventTypes(elementId, panelId, eventTypeSelectedId) {
+            $(elementId).empty();
+            $(elementId).append('<option value="">Executives Programs</option>');
+            // $.ajax({
+            //     url: server + "MasterData/api/MasterDataAPI/GetAllEventTypes",
+            //     type: "GET",
+            //     dataType: "JSON",
+            //     beforeSend: function () {
+            //         $(panelId + " select").hide();
+            //         $(panelId + " .select2").hide();
+            //         $(panelId + " .fa-spinner").show();
+            //     },
+            //     complete: function () {
+            //         $(panelId + " select").show();
+            //         $(panelId + " .select2").show();
+            //         $(panelId + " .fa-spinner").hide();
+            //     },
+            //     data: {
+            //     }, success: function (result) {
+            //         for (var i = 0; i < result.length; i++) {
+            //             if (eventTypeSelectedId !== null && eventTypeSelectedId !== "" && eventTypeSelectedId !== undefined) {
+            //                 if (eventTypeSelectedId === result[i].id) {
+            //                     $(elementId).append(
+            //                         '<option value="' + result[i].id + '" selected>' + result[i].name + '</option>'
+            //                     );
+            //                 } else {
+            //                     $(elementId).append(
+            //                         '<option value="' + result[i].id + '">' + result[i].name + '</option>'
+            //                     );
+            //                 }
+            //             } else {
+            //                 $(elementId).append(
+            //                     '<option value="' + result[i].id + '">' + result[i].name + '</option>'
+            //                 );
+            //             }
+            //         }
+            //     }, error: function (e) {
+            //         console.log(e);
+            //     }
+            // });
+        }
+
+        function getEventCategories(elementId, panelId, eventCategorySelectedId) {
+            $(elementId).empty();
+            $(elementId).append('<option value="">All</option>');
+            $.ajax({
+                url: server + "MasterData/api/MasterDataAPI/GetAllEventCategories",
+                type: "GET",
+                dataType: "JSON",
+                beforeSend: function () {
+                    $(panelId + " select").hide();
+                    $(panelId + " .select2").hide();
+                    $(panelId + " .fa-spinner").show();
+                },
+                complete: function () {
+                    $(panelId + " select").show();
+                    $(panelId + " .select2").show();
+                    $(panelId + " .fa-spinner").hide();
+                },
+                data: {
+                }, success: function (result) {
+                    for (var i = 0; i < result.length; i++) {
+                        if (eventCategorySelectedId !== null && eventCategorySelectedId !== "" && eventCategorySelectedId !== undefined) {
+                            if (eventCategorySelectedId === result[i].id) {
+                                $(elementId).append(
+                                    '<option value="' + result[i].id + '" selected>' + result[i].name + '</option>'
+                                );
+                            } else {
+                                $(elementId).append(
+                                    '<option value="' + result[i].id + '">' + result[i].name + '</option>'
+                                );
+                            }
+                        } else {
+                            $(elementId).append(
+                                '<option value="' + result[i].id + '">' + result[i].name + '</option>'
+                            );
+                        }
+                    }
+                }, error: function (e) {
+                    console.log(e);
+                }
+            });
+        }
+
+        function getCountries(elementId, panelId, countrySelectedId) {
+            $(elementId).empty();
+            $(elementId).append('<option value="">All</option>');
+            $.ajax({
+                url: server + "MasterData/api/MasterDataAPI/GetAllCountries",
+                type: "GET",
+                dataType: "JSON",
+                beforeSend: function () {
+                    $(panelId + " select").hide();
+                    $(panelId + " .select2").hide();
+                    $(panelId + " .fa-spinner").show();
+                },
+                complete: function () {
+                    $(panelId + " select").show();
+                    $(panelId + " .select2").show();
+                    $(panelId + " .fa-spinner").hide();
+                },
+                data: {
+                }, success: function (result) {
+                    for (var i = 0; i < result.length; i++) {
+                        if (countrySelectedId !== null && countrySelectedId !== "" && countrySelectedId !== undefined) {
+                            if (countrySelectedId === result[i].id) {
+                                $(elementId).append(
+                                    '<option value="' + result[i].id + '" selected>' + result[i].name + '</option>'
+                                );
+                            } else {
+                                $(elementId).append(
+                                    '<option value="' + result[i].id + '">' + result[i].name + '</option>'
+                                );
+                            }
+                        } else {
+                            $(elementId).append(
+                                '<option value="' + result[i].id + '">' + result[i].name + '</option>'
+                            );
+                        }
+                    }
+                }, error: function (e) {
+                    console.log(e);
+                }
+            });
+        }
+
+        function getCitiesByCountry(countryElementId, cityElementId, cityPanelId, countrySelectedId, citySelectedId) {
+            $(cityElementId).empty();
+            $(cityElementId).append('<option value="">All</option>');
+            var countryId = "";
+            if (countrySelectedId !== null && countrySelectedId !== "" && countrySelectedId !== undefined) {
+                countryId = countrySelectedId;
+            } else {
+                countryId = document.getElementById(countryElementId).value;
+            }
+            $.ajax({
+                url: server + "MasterData/api/MasterDataAPI/GetAllCitiesByCountryId",
+                type: "GET",
+                dataType: "JSON",
+                beforeSend: function () {
+                    $(cityPanelId + " select").hide();
+                    $(cityPanelId + " .select2").hide();
+                    $(cityPanelId + " .fa-spinner").show();
+                },
+                complete: function () {
+                    $(cityPanelId + " select").show();
+                    $(cityPanelId + " .select2").show();
+                    $(cityPanelId + " .fa-spinner").hide();
+                },
+                data: {
+                    countryId: countryId,
+                }, success: function (result) {
+                    for (var i = 0; i < result.length; i++) {
+                        if (citySelectedId !== null && citySelectedId !== "" && citySelectedId !== undefined) {
+                            if (citySelectedId === result[i].id) {
+                                $(cityElementId).append(
+                                    '<option value="' + result[i].id + '" selected>' + result[i].name + '</option>'
+                                );
+                            } else {
+                                $(cityElementId).append(
+                                    '<option value="' + result[i].id + '">' + result[i].name + '</option>'
+                                );
+                            }
+                        } else {
+                            $(cityElementId).append(
+                                '<option value="' + result[i].id + '">' + result[i].name + '</option>'
+                            );
+                        }
+                    }
+                }, error: function (e) {
+                    console.log(e);
+                }
+            });
+        }
+
+        function setFromYears(elementId, panelId, eventTypeSelectedId) {
+            $(elementId).empty();
+            $(elementId).append('<option value="">All</option>');
+
+            for (var i = 2023; i <= 2030; i++) {
+                if (eventTypeSelectedId !== null && eventTypeSelectedId !== "" && eventTypeSelectedId !== undefined) {
+                    if (eventTypeSelectedId === i) {
+                        $(elementId).append(
+                            '<option value="' + i + '" selected>' + i + '</option>'
+                        );
+                    } else {
+                        $(elementId).append(
+                            '<option value="' + i + '">' + i + '</option>'
+                        );
+                    }
+                } else {
+                    if (i === currentYear) {
+                        $(elementId).append(
+                            '<option value="' + i + '" selected>' + i + '</option>'
+                        );
+                    } else {
+                        $(elementId).append(
+                            '<option value="' + i + '">' + i + '</option>'
+                        );
+                    }
+                }
+            }
+        }
+
+        function setFromMonths(elementId, panelId, eventTypeSelectedId) {
+            $(elementId).empty();
+            $(elementId).append('<option value="">All</option>');
+
+            for (var i = 0; i < monthLong.length; i++) {
+                if (eventTypeSelectedId !== null && eventTypeSelectedId !== "" && eventTypeSelectedId !== undefined) {
+                    if (eventTypeSelectedId === i) {
+                        $(elementId).append(
+                            '<option value="' + (i + 1) + '" selected>' + monthLong[i] + '</option>'
+                        );
+                    } else {
+                        $(elementId).append(
+                            '<option value="' + (i + 1) + '">' + monthLong[i] + '</option>'
+                        );
+                    }
+                } else {
+                    $(elementId).append(
+                        '<option value="' + (i + 1) + '">' + monthLong[i] + '</option>'
+                    );
+                }
+            }
+        }
+
+        function search() {
+            //$("#search_result_panel").hide();
+            $("#search_result_panel table tbody").empty();
+
+            var eventTypeId = document.getElementById("EventTypeId").value;
+            var fromYear = document.getElementById("FromYear").value;
+            var fromMonth = document.getElementById("FromMonth").value;
+            //var eventCategoryId = document.getElementById("EventCategoryId").value;
+            //var eventDate = document.getElementById("EventDate").value;
+            var countryId = document.getElementById("CountryId").value;
+            var cityId = document.getElementById("CityId").value;
+
+            $.ajax({
+                url: server + "Event/api/EventAPI/GetAll",
+                type: "POST",
+                dataType: "JSON",
+                beforeSend: function () {
+                    $("#search_panel #submit_search_panel button").hide();
+                    $("#search_panel #submit_search_panel p").show();
+                },
+                complete: function () {
+                    $("#search_panel #submit_search_panel button").show();
+                    $("#search_panel #submit_search_panel p").hide();
+                },
+                data: {
+                    EventTypeId: "a50e3c8d-bd73-496a-86ee-5f363d3554e9",
+                    FromYear: fromYear,
+                    FromMonth: fromMonth,
+                    //EventCategoryId: eventCategoryId,
+                    //EventDate: eventDate,
+                    CountryId: countryId,
+                    CityId: cityId,
+                    Archive: archive
+                }, success: function (result) {
+                    for (var i = 0; i < result.length; i++) {
+                        //$("#search_result_panel").show();
+                        var fromDateMonth = "";
+                        var date = "";
+                        if (result[i].fromDate !== null && result[i].fromDate !== "" && result[i].fromDate !== undefined) {
+                            var fromDate = new Date(result[i].fromDate);
+                            date = fromDate.toLocaleString('default', { month: 'long' });
+                            date += "<br />" + fromDate.toLocaleString('default', { day: 'numeric' });
+
+                            if (result[i].toDate !== null && result[i].toDate !== "" && result[i].toDate !== undefined) {
+                                var toDate = new Date(result[i].toDate);
+                                date += " - " + toDate.toLocaleString('default', { day: 'numeric' });
+                            }
+                        }
+
+                        var time = "";
+                        if (result[i].fromTime !== null && result[i].fromTime !== "" && result[i].fromTime !== undefined) {
+                            var fromTime = new Date(result[i].fromTime);
+                            time = fromTime.toLocaleString('default', { hour: '2-digit', minute: '2-digit' });
+
+                            if (result[i].toTime !== null && result[i].toTime !== "" && result[i].toTime !== undefined) {
+                                var toTime = new Date(result[i].toTime);
+                                time += " - " + toTime.toLocaleString('default', { hour: '2-digit', minute: '2-digit' });
+                            }
+                        }
+
+                        var website = "";
+                        if (result[i].website !== null && result[i].website !== "" && result[i].website !== undefined) {
+                            website = '<a href="' + result[i].website + '" target="_blank">Click</a>';
+                        }
+
+                        $("#search_result_panel table tbody").append(
+                            '<tr>\
+                                        <td class="text-center">' + (i + 1) + '</td>\
+                                        <td class="text-center">' + date + '</td>\
+                                        <td class="text-center">' + time + '</td>\
+                                        <td>' + result[i].englishName + '</td>\
+                                        <td>' + result[i].countryName + '</td>\
+                                        <td>' + result[i].cityName + '</td>\
+                                        <td class="text-center">' + website + '</td>\
+                                    </tr>'
+                        );
+                    }
+                }, error: function (e) {
+                    console.log(e);
+                }
+            });
+        }
+    </script>
+
 </body>
 </html>
