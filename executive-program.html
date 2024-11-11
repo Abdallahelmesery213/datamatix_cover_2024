@@ -59,6 +59,9 @@
     thead {
         background-color: #0a549f !important;
     }
+    .table tbody tr td br{
+        display: none;
+    }
     .table.table-striped.table-bordered thead,
     .table.table-striped.table-bordered thead th {
         background-color: #0a549f !important;
@@ -387,13 +390,13 @@
                             <table class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
-                                        <th class="text-center">Sr</th>
-                                        <th class="text-center">Date</th>
-                                        <th class="text-center">Timing</th>
+                                        <th>Sr</th>
+                                        <th>Date</th>
+                                        <th>Timing</th>
                                         <th>Conference Name</th>
                                         <th>Country</th>
                                         <th>City</th>
-                                        <th class="text-center">Website</th>
+                                        <th>Website</th>
                                     </tr>
                                 </thead>
 
@@ -973,13 +976,13 @@
 
                         $("#search_result_panel table tbody").append(
                             '<tr>\
-                                        <td class="text-center">' + (i + 1) + '</td>\
-                                        <td class="text-center">' + date + '</td>\
-                                        <td class="text-center">' + time + '</td>\
+                                        <td>' + (i + 1) + '</td>\
+                                        <td>' + date + '</td>\
+                                        <td>' + time + '</td>\
                                         <td>' + result[i].englishName + '</td>\
                                         <td>' + result[i].countryName + '</td>\
                                         <td>' + result[i].cityName + '</td>\
-                                        <td class="text-center">' + website + '</td>\
+                                        <td>' + website + '</td>\
                                     </tr>'
                         );
                     }
