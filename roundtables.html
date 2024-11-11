@@ -57,15 +57,20 @@
     }
 
     thead {
-        background-color: #0a549f;
+        background-color: #0a549f !important;
     }
-    .table {
+    .table.table-striped.table-bordered thead,
+    .table.table-striped.table-bordered thead th {
+        background-color: #0a549f !important;
+        color: #fff;
+    }
+    /* .table {
         --bs-table-bg: #0a549f !important;
     }
 
         .table thead tr th {
             color: #fff;
-        }
+        } */
 
     table tr td a {
         color: #000;
@@ -368,11 +373,11 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-md-12">
                             <p class="ps-3 pe-3">Select the type of Event you are looking for, from the drop down in (Type) and then press. GO</p>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="row">
                         <div class="col-md-12" id="search_result_panel">
